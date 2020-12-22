@@ -1,36 +1,39 @@
-const sequelize=require('./db');
-
-const User=sequelize.define('User',{
-    email:{
-        type:DataTypes.STRING,
-        allowNull:false,
-        primaryKey:true
-    },
-    password:{
-        type:DataTypes.STRING,
-        allowNull:false
-    },
-    nic:{
-        type:DataTypes.STRING,
-        allowNull:false,
-        primaryKey:true
-    },
-    firstName:{
-        type:DataTypes.STRING,
-        allowNull:false
-    },
-    lastName:{
-        type:DataTypes.STRING,
-        allowNull:false
-    },
-    DOB:{
-        type:DataTypes.DATEONLY,
-        allowNull:false
-    },
-    pic_location:{
-        type:DataTypes.STRING,
-        allowNull:false
-    },
-
+module.exports=(sequelize,Sequelize)=>{
+    const User=sequelize.define('User',{
+        email:{
+            type:Sequelize.STRING,
+            allowNull:false,
+            primaryKey:true
+        },
+        password:{
+            type:Sequelize.STRING,
+            allowNull:false
+        },
+        nic:{
+            type:Sequelize.STRING,
+            allowNull:false,
+            primaryKey:true
+        },
+        firstName:{
+            type:Sequelize.STRING,
+            allowNull:false
+        },
+        lastName:{
+            type:Sequelize.STRING,
+            allowNull:false
+        },
+        DOB:{
+            type:Sequelize.DATEONLY,
+            allowNull:false
+        },
+        pic_location:{
+            type:Sequelize.STRING,
+            allowNull:false
+        },
+    
+    }
+    );
+    return User;
+    
 }
-);
+
