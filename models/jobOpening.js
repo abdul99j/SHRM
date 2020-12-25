@@ -8,10 +8,7 @@ module.exports=(sequelize,Sequelize)=>{
         type:Sequelize.STRING,
         allowNull:false
     },
-    postedOn:{
-        type:Sequelize.DATEONLY,
-        allowNull:false
-    }})
+    })
     return jobOpening;
 }
 

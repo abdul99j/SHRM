@@ -12,7 +12,6 @@ module.exports=(sequelize,Sequelize)=>{
         nic:{
             type:Sequelize.STRING,
             allowNull:false,
-            primaryKey:true
         },
         firstName:{
             type:Sequelize.STRING,

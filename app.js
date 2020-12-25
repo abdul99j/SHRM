@@ -4,10 +4,22 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var hbs = require('express-handlebars');
-var sequelize=require('./models/db');
+
+var models=require("./models");
 var routes = require('./routes/index');
 var userRouter=require('./routes/users');
-var jobOpening=require('./routes/jobopenings');
+var jobOpeningRouter=require('./routes/jobopenings');
+var postJobRouter=require('./routes/postJob');
+var db=require('./models');
+const jobApplicationsRouter = require('./routes/jobapplications');
+var loginRouter=require('./routes/login');
+var singupRouter=require('./routes/signup');
+
+models.sequelize.sync({force:true}).then(function() {
+  console.log('connected to database')
+}).catch(function(err) {
+  console.log(err)
+});
 
 var app = express();
 
@@ -24,11 +36,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
 app.use('/', routes);
 app.use('/user',userRouter);
-app.use('/openings',jobOpening);
+app.use('/openings',jobOpeningRouter);
+app.use('/applications',jobApplicationsRouter);
+app.use('/postjob',postJobRouter);
+app.use('/login',loginRouter);
+app.use('/signup',singupRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -60,5 +74,5 @@ app.use(function(err, req, res, next) {
   });
 });
 
-
+ 
 module.exports = app;

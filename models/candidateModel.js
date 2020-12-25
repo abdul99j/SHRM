@@ -10,7 +10,6 @@ module.exports=(sequelize,Sequelize)=>{
             type:Sequelize.STRING,
             allowNull:false
         },
-           
     }
     );
     return Candidate;

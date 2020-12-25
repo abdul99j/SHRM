@@ -4,14 +4,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', async function(req, res, next) {
-  try{
-    var jobopenings=await jobOpening.findAll();
-    console.log(jobOpening);
-  }
-  catch{
-    console.log("CANT FIND JOB OPENINGS");
-
-  }
+  res.render('jobOpening');
 });
+
 
 module.exports=router;
