@@ -17,12 +17,17 @@ const sequelize = new Sequelize('shrm','postgres','123456',{
 });
 
 var db={};
+
 db.attendance=require('./attendance')(sequelize,Sequelize);
 db.candidateModel=require('./candidateModel')(sequelize,Sequelize);
 db.jobApplications=require('./jobApplications')(sequelize,Sequelize);
 db.jobOpening=require('./jobOpening')(sequelize,Sequelize);
 db.userModel=require('./userModel')(sequelize,Sequelize);
 
+db.attendance.belongsTo(db.userModel);
+db.userModel.hasMany(db.attendance);
+db.jobApplications.belongsTo(db.jobOpening);
+db.jobOpening.hasMany(db.jobApplications);
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;

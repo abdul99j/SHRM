@@ -13,7 +13,7 @@ router.post('/',async(req,res)=>{
         console.log("SUCCESSFULLY CREATED");
     }
     catch{
-        
+        res.redirect('error');
     }
 });
 module.exports=router;

@@ -34,9 +34,7 @@ module.exports=(sequelize,Sequelize)=>{
         }
     
     });
-    JobApplication.associate=(models)=>{
-        JobApplication.belongsTo(models.jobOpening);
-    };
+    
     return JobApplication;
 
 }

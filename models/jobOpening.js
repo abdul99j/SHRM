@@ -9,10 +9,9 @@ module.exports=(sequelize,Sequelize)=>{
         type:Sequelize.STRING,
         allowNull:false
     },
+    
     });
-    jobOpening.associate=(models)=>{
-        jobOpening.hasMany(models.jobApplication);
-    };
+    
     return jobOpening;
 };
 
