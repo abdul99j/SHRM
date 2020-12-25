@@ -43,6 +43,8 @@ app.use('/applications',jobApplicationsRouter);
 app.use('/postjob',postJobRouter);
 app.use('/login',loginRouter);
 app.use('/signup',singupRouter);
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
