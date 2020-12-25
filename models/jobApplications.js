@@ -3,12 +3,10 @@ module.exports=(sequelize,Sequelize)=>{
         email:{
             type:Sequelize.STRING,
             allowNull:false,
-            primaryKey:true
         },
         nic:{
             type:Sequelize.STRING,
             allowNull:false,
-            primaryKey:true
         },
         firstName:{
             type:Sequelize.STRING,
@@ -36,6 +34,10 @@ module.exports=(sequelize,Sequelize)=>{
         }
     
     });
+    JobApplication.associate=(models)=>{
+        JobApplication.belongsTo(models.jobOpening);
+    };
     return JobApplication;
 
 }
+

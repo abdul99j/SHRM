@@ -12,5 +12,10 @@ module.exports=(sequelize,Sequelize)=>{
         },
     }
     );
+    Candidate.associate=(models)=>{
+        Candidate.hasMany(models.Attendance);
+    };
     return Candidate;
 }
+
+

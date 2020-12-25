@@ -14,6 +14,9 @@ module.exports=(sequelize,Sequelize)=>{
         }    
     }
     );
+    Attendance.associate=(models)=>{
+        Attendance.hasMany(models.Candidate);
+     };
     return Attendance;
 }
-
+    

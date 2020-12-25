@@ -1,3 +1,4 @@
+
 module.exports=(sequelize,Sequelize)=>{
     var jobOpening=sequelize.define('JobOpening',{
     jobTitle:{
@@ -8,7 +9,11 @@ module.exports=(sequelize,Sequelize)=>{
         type:Sequelize.STRING,
         allowNull:false
     },
-    })
+    });
+    jobOpening.associate=(models)=>{
+        jobOpening.hasMany(models.jobApplication);
+    };
     return jobOpening;
-}
+};
+
 
