@@ -17,7 +17,7 @@ module.exports=(sequelize,Sequelize)=>{
             allowNull:false
         },
         Experience:{
-            type:Sequelize.DATEONLY,
+            type:Sequelize.INTEGER,
             allowNull:false
         },
         Qualification:{
@@ -28,11 +28,6 @@ module.exports=(sequelize,Sequelize)=>{
             type:Sequelize.STRING,
             allowNull:false
         },
-        coverLetter_file:{
-            type:Sequelize.STRING,
-            allowNull:true
-        }
-    
     });
     
     return JobApplication;

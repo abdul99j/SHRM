@@ -1,4 +1,4 @@
 module.exports={
-    'secretKey':'asu1999-shrm',
+    'secretKey':'asu17/07-shrm',
     'postgresUrl':'localhost'
 };

@@ -6,7 +6,7 @@ module.exports=(sequelize,Sequelize)=>{
         allowNull:false
     },
     jobDescription:{
-        type:Sequelize.STRING,
+        type:Sequelize.STRING(1200),
         allowNull:false
     },
     

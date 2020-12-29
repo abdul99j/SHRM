@@ -1,5 +1,13 @@
 module.exports=(sequelize,Sequelize)=>{
     const User=sequelize.define('User',{
+        isAdmin:{
+            type:Sequelize.BOOLEAN,
+            allowNull:false
+        },
+        salary:{
+            type:Sequelize.INTEGER,
+            allowNull:false
+        },
         email:{
             type:Sequelize.STRING,
             allowNull:false,
@@ -13,6 +21,10 @@ module.exports=(sequelize,Sequelize)=>{
             type:Sequelize.STRING,
             allowNull:false,
         },
+        fuel:{
+            type:Sequelize.INTEGER,
+            allowNull:false
+        },
         firstName:{
             type:Sequelize.STRING,
             allowNull:false
@@ -22,13 +34,33 @@ module.exports=(sequelize,Sequelize)=>{
             allowNull:false
         },
         DOB:{
-            type:Sequelize.DATEONLY,
+            type:Sequelize.STRING,
+            allowNull:false
+        },
+        experience:{
+            type:Sequelize.STRING,
+            allowNull:true
+        },
+        Department:{
+            type:Sequelize.STRING,
+            allowNull:false
+        },
+        designation:{
+            type:Sequelize.STRING,
             allowNull:false
         },
         pic_location:{
             type:Sequelize.STRING,
             allowNull:false
         },
+        healthInsurance:{
+            type:Sequelize.STRING,
+            allowNull:false
+        },
+        benificiaries:{
+            type:Sequelize.INTEGER,
+            allowNull:false
+        }
     
     }
     );

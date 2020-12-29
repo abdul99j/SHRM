@@ -8,25 +8,6 @@
 </head>
 
 <body>
-    <div>
-        <div class="header-blue" style="height: 50px;">
-            <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
-                <div class="container-fluid"><a class="navbar-brand" href="#">SimplifiedHR</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navcol-1">
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-                            <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Dropdown </a>
-                                <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
-                            </li>
-                        </ul>
-                        <form class="form-inline mr-auto" target="_self">
-                            <div class="form-group"><label for="search-field"><i class="fa fa-search"></i></label><input class="form-control search-field" type="search" id="search-field" name="search"></div>
-                        </form><span class="navbar-text"> <a class="login" href="#">Log In</a></span><a class="btn btn-light action-button" role="button" href="#">Sign Up</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
     <h1 style="font-size: 30px;margin: 30px;height: 36px;">Employee Details</h1>
     <div>
         <div class="container">
@@ -37,16 +18,15 @@
                 <div class="col"><button class="btn btn-primary bg-info" type="button">View Attendance</button></div>
             </div>
         </div>
-    </div><small style="font-size: 16px;font-style: italic;font-weight: bold;text-align: left;margin: 30px;">Name</small>
-    <div class="clearfix"></div><small style="font-size: 16px;margin: 30px;padding: 0px;">Age</small>
-    <div class="clearfix"></div><small style="margin: 30px;font-size: 16px;">Background</small>
+    </div><small style="font-size: 16px;font-style: italic;font-weight: bold;text-align: left;margin: 30px;">{{{employee.dataValues.firstName}}} {{{employee.dataValues.lastName}}}</small>
+    <div class="clearfix"></div><small style="font-size: 16px;margin: 30px;padding: 0px;">Email</small> <small style="font-size: 16px;margin: 30px;padding: 0px;">{{{employee.dataValues.Email}}}</small>
+    <div class="clearfix"></div><small style="margin: 30px;font-size: 16px;">Department</small><small style="font-size: 16px;margin: 30px;padding: 0px;">{{{employee.dataValues.Department}}}</small>
     <div class="row">
-        <div class="col"><small style="font-size: 16px;margin: 30px;">Qualifications</small></div>
-    </div><small style="margin: 30px;font-size: 16px;">Achivements</small>
+        <div class="col"><small style="font-size: 16px;margin: 30px;">Designation</small></div><small style="font-size: 16px;margin: 30px;padding: 0px;">{{{employee.dataValues.desingation}}}</small>
     <div class="row">
-        <div class="col"><small style="font-size: 16px;margin: 30px;">Experience</small></div>
+        <div class="col"><small style="font-size: 16px;margin: 30px;">Experience</small></div><div><small style="font-size: 16px;margin: 30px;padding: 0px;">{{{employee.dataValues.experience}}}</small></div>
     </div><small style="font-size: 16px;margin: 30px;">Education details</small>
-    <div class="clearfix"></div><small style="font-size: 16px;margin: 30px;">Desingation</small>
+    <div class="clearfix"></div><small style="font-size: 16px;margin: 30px;">NIC</small><small style="font-size: 16px;margin: 30px;padding: 0px;">{{{employee.dataValues.nic}}}</small>
     <div class="row">
         <div class="col">
             <h2 style="margin: 30px;font-size: 20px;">Salary &amp; Benifits</h2>
@@ -54,9 +34,10 @@
     </div>
     <div class="row">
         <div class="col" id="sal-ben">
-            <h4>Salary</h4>
-            <h4>Health Insurance</h4>
-            <h4>Feul</h4>
+            <h4>Salary</h4><small style="font-size: 16px;margin: 30px;padding: 0px;">{{{employee.dataValues.salary}}}</small>
+            <h4>Health Insurance</h4><small style="font-size: 16px;margin: 30px;padding: 0px;">{{{employee.dataValues.healthInsurance}}}</small>
+            <h4>No Of Benificiaries</h4><small style="font-size: 16px;margin: 30px;padding: 0px;">{{{employee.dataValues.benificiaries}}}</small>
+            <h4>Feul</h4><small style="font-size: 16px;margin: 30px;padding: 0px;">{{{employee.dataValues.fuel}}}</small>
             <div class="text-center"></div>
         </div>
     </div>

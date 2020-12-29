@@ -1,11 +1,11 @@
 .header-blue {
     background: linear-gradient(135deg, #172a74, #21a9af);
     background-color: #184e8e;
-    padding-bottom: 80px;
+    margin: -52px -50px 0px -50px;
     font-family: 'Source Sans Pro', sans-serif;
   }
   
-  @media (min-width:768px) {
+  @media (min-width:800px) {
     .header-blue {
       padding-bottom: 120px;
     }
@@ -13,15 +13,14 @@
   
   .header-blue .navbar {
     background: transparent;
-    padding-top: .75rem;
-    padding-bottom: .75rem;
+    
     color: #fff;
     border-radius: 0;
     box-shadow: none;
     border: none;
   }
   
-  @media (min-width:768px) {
+  @media (min-width:800px) {
     .header-blue .navbar {
       padding-top: 1rem;
       padding-bottom: 1rem;
@@ -317,7 +316,6 @@
   }
   
   .navigation-clean .navbar-nav > li > .dropdown-menu {
-    margin-top: -5px;
     box-shadow: none;
     background-color: #fff;
     border-radius: 2px;

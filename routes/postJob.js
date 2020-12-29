@@ -1,7 +1,7 @@
 var express = require('express');
-var jobOpening=require('../models/jobOpening');
+var jobOpening=require('../models').jobOpening;
 var router = express.Router();
-
+var passport=require('passport');
 
 router.get('/',async(req,res,next)=>{
     res.render('postJob');
@@ -9,11 +9,17 @@ router.get('/',async(req,res,next)=>{
 });
 router.post('/',async(req,res)=>{
     try{
-        var newJob=await jobOpening.create({jobTitle:req.params.jobTitle,jobDescrition:req.params.jobDescrition});
-        console.log("SUCCESSFULLY CREATED");
+        if(req.body.jobTitle==''||req.body.jobTitle==''){
+            res.render('postJob',{error:'Enter valid details'});
+        }
+        else {
+            var newJob=await jobOpening.create({jobTitle:req.body.jobTitle,jobDescription:req.body.jobDescription});
+            res.render('postJob',{success:'Job Posted Succesfully'});
+        }
     }
-    catch{
-        res.redirect('error');
+    catch(e){
+        console.log(e);
+        res.render('postJob',{error:'error while posting job'});
     }
 });
 module.exports=router;

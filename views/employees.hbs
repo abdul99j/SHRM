@@ -11,32 +11,15 @@
 <body style="height: 650px;">
     <h1 id="employee-heading" style="margin: 70px;font-size: 30px;">Employees&nbsp;</h1>
     <div></div>
-    <div class="list-group"><a class="list-group-item list-group-item-action flex-column align-items-start" href="#" style="height: 100px;">
+    <div class="list-group">
+        {{#each employee}}
+        <a class="list-group-item list-group-item-action flex-column align-items-start" href="#" style="height: 100px;">
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Employee Name</h5><span class="badge badge-pill badge-primary align-self-center" style="height: 28px;text-align: center;font-size: 15px;width: 158px;font-weight: bold;font-style: oblique;">View Profile</span>
+                <h5 class="mb-1">{{this.dataValues.firstName}}  {{this.dataValues.lastName}}</h5><a href="/employees/{{this.dataValues.email}}"class="badge badge-pill badge-primary align-self-center" style="height: 28px;text-align: center;font-size: 15px;width: 158px;font-weight: bold;font-style: oblique;">View Profile</a>
             </div>
-            <p class="mb-1">Department</p><small class="text-muted" style="font-size: 16px;">Designation</small>
-        </a><a class="list-group-item list-group-item-action flex-column align-items-start" href="#" style="height: 100px;">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Employee Name</h5><span class="badge badge-pill badge-primary align-self-center" style="height: 28px;text-align: center;font-size: 15px;width: 158px;font-weight: bold;font-style: oblique;"></span><span class="badge badge-pill badge-primary align-self-center" style="height: 28px;text-align: center;font-size: 15px;width: 158px;font-weight: bold;font-style: oblique;"></span><span class="badge badge-pill badge-primary align-self-center" style="height: 28px;text-align: center;font-size: 15px;width: 158px;font-weight: bold;font-style: oblique;">View Profile</span>
-            </div>
-            <p class="mb-1">Department</p><small class="text-muted" style="font-size: 16px;">Designation</small>
-        </a><a class="list-group-item list-group-item-action flex-column align-items-start" href="#" style="height: 100px;">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Employee name</h5><span class="badge badge-pill badge-primary align-self-center" style="height: 28px;text-align: center;font-size: 15px;width: 158px;font-weight: bold;font-style: oblique;">View Profile</span>
-            </div>
-            <p class="mb-1">Department</p><small class="text-muted" style="font-size: 16px;">Designation</small>
-        </a><a class="list-group-item list-group-item-action flex-column align-items-start" href="#" style="height: 100px;">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Employee name</h5><span class="badge badge-pill badge-primary align-self-center" style="height: 28px;text-align: center;font-size: 15px;width: 158px;font-weight: bold;font-style: oblique;">View Profile</span>
-            </div>
-            <p class="mb-1">Department</p><small class="text-muted" style="font-size: 16px;">Designation</small>
-        </a><a class="list-group-item list-group-item-action flex-column align-items-start" href="#">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Employee name</h5><span class="badge badge-pill badge-primary align-self-center" style="height: 28px;font-size: 15px;text-align: center;font-style: oblique;width: 158px;">View Application</span>
-            </div>
-            <p class="mb-1">Department</p><small class="text-muted" style="font-size: 16px;">Designation</small>
-        </a></div>
+            <p class="mb-1">{{this.dataValues.Department}}</p><small class="text-muted" style="font-size: 16px;">{{this.dataValues.designation}}</small>
+        </a>
+        {{/each}}
 </body>
 
 </html>

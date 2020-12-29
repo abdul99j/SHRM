@@ -8,23 +8,24 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/public/stylesheets/navbar.css">
+    <link rel="stylesheet" href="/../../stylesheets/navbar.css">
 
 </head>
 <body>
-    <div style="height: 70px;">
+    <div >
         <div class="header-blue" style="height: 50px;max-height: 70px;">
             <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
                 <div class="container-fluid"><a class="navbar-brand" href="#">SimplifiedHR</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navcol-1">
                         <ul class="nav navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="#">Employees</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Jobs listing</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Nav Item</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/employees">Employees</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/openings">Jobs listing</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/postJob">Post Job</a></li>
                         </ul>
                         <form class="form-inline mr-auto" target="_self">
                             <div class="form-group"><label for="search-field"></label></div>
-                        </form><span class="navbar-text"> <a class="login" href="#">Logout</a></span>
+                        </form><span class="navbar-text"> <a class="login" href="/signup">Sign up</a></span>
+                        </form><span class="navbar-text"> <a class="login" href="/login">login</a></span>
                     </div>
                 </div>
             </nav>

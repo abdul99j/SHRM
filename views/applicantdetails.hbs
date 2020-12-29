@@ -5,33 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>application_details</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/Header-Blue.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="../../stylesheet/applicationdetails.css">
 </head>
 
 <body>
-    <div>
-        <div class="header-blue" style="height: 50px;">
-            <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
-                <div class="container-fluid"><a class="navbar-brand" href="#">SimplifiedHR</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navcol-1">
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-                            <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Dropdown </a>
-                                <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
-                            </li>
-                        </ul>
-                        <form class="form-inline mr-auto" target="_self">
-                            <div class="form-group"><label for="search-field"><i class="fa fa-search"></i></label><input class="form-control search-field" type="search" id="search-field" name="search"></div>
-                        </form><span class="navbar-text"> <a class="login" href="#">Log In</a></span><a class="btn btn-light action-button" role="button" href="#">Sign Up</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
     <h1 style="font-size: 30px;margin: 30px;height: 36px;">Application details&nbsp;</h1>
     <div>
         <div class="container">
@@ -42,14 +19,13 @@
                 <div class="col"></div>
             </div>
         </div>
-    </div><small style="font-size: 16px;font-style: italic;font-weight: bold;text-align: left;margin: 30px;">Name</small>
-    <div class="clearfix"></div><small style="font-size: 16px;margin: 30px;padding: 0px;">Age</small>
-    <div class="clearfix"></div><small style="margin: 30px;font-size: 16px;">Background</small>
+    </div><small style="font-size: 16px;font-style: italic;font-weight: bold;text-align: left;margin: 30px;">First Name:</small> <p>{{{application.dataValues.firstName}}}</p>
+    <div class="clearfix"></div><small style="font-size: 16px;margin: 30px;padding: 0px;">NIC</small><p>{{{application.dataValues.lastName}}}</p>
+    <div class="clearfix"></div><small style="font-size: 16px;margin: 30px;padding: 0px;">NIC</small><p>{{{application.dataValues.nic}}}</p>
     <div class="row">
-        <div class="col"><small style="font-size: 16px;margin: 30px;">Qualifications</small></div>
-    </div><small style="margin: 30px;font-size: 16px;">Achivements</small>
+        <div class="col"><small style="font-size: 16px;margin: 30px;">Qualifications</small></div><p>{{{application.dataValues.Qualification}}}</p>
     <div class="row">
-        <div class="col"><small style="font-size: 16px;margin: 30px;">Experience</small></div>
+        <div class="col"><small style="font-size: 16px;margin: 30px;">Experience</small></div><p>{{{application.dataValues.Experience}}}</p>
     </div><small style="font-size: 16px;margin: 30px;">Education details</small>
     <div class="row">
         <div class="col">
@@ -64,8 +40,7 @@
             </div>
         </div>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    
 </body>
 
 </html>

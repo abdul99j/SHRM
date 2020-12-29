@@ -4,14 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>job_detail</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="../../stylesheets/jobDetails.css">
 </head>
 <body style="height: 650px;">
-    <h1 style="margin: 110px 20px 30px 180px;font-size: 30px;">Software Engineer</h1>
-    <div class="job-meta"><small class="minor-detail">ComputerScience/Engineering</small><small class="minor-detail">Date Posted: 10/9/2020</small><small class="minor-detail">Full-Time</small><button class="btn btn-primary btn-lg apply-now" type="button">Apply Now</button></div>
+    <h1 style="margin: 110px 20px 30px 180px;font-size: 30px;">{{{job_opening.dataValues.jobTitle}}}</h1>
+    <div class="job-meta"><small class="minor-detail">ComputerScience/Engineering</small><small class="minor-detail">Date Posted: 10/9/2020</small><small class="minor-detail">Full-Time</small><a href="../applications/apply/{{job_opening.dataValues.id}}" class="btn btn-primary btn-lg apply-now" type="button">Apply Now</a></div>
     <hr>
     <div class="job-meta"></div>
-    <p class="job-meta job-desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br><br>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.<br><br><br></p>
+    <p class="job-meta job-desc">{{{job_opening.dataValues.jobDescription}}}<br><br><br></p>
 </body>
 
 </html>
