@@ -19,14 +19,11 @@
                 <div class="col"></div>
             </div>
         </div>
-    </div><small style="font-size: 16px;font-style: italic;font-weight: bold;text-align: left;margin: 30px;">First Name:</small> <p>{{{application.dataValues.firstName}}}</p>
-    <div class="clearfix"></div><small style="font-size: 16px;margin: 30px;padding: 0px;">NIC</small><p>{{{application.dataValues.lastName}}}</p>
-    <div class="clearfix"></div><small style="font-size: 16px;margin: 30px;padding: 0px;">NIC</small><p>{{{application.dataValues.nic}}}</p>
-    <div class="row">
-        <div class="col"><small style="font-size: 16px;margin: 30px;">Qualifications</small></div><p>{{{application.dataValues.Qualification}}}</p>
-    <div class="row">
-        <div class="col"><small style="font-size: 16px;margin: 30px;">Experience</small></div><p>{{{application.dataValues.Experience}}}</p>
-    </div><small style="font-size: 16px;margin: 30px;">Education details</small>
+     </div><small style="font-size: 16px;font-style: italic;font-weight: bold;text-align: left;margin: 30px;">{{{application.dataValues.firstName}}} {{{application.dataValues.lastName}}}</small>
+    <div class="clearfix"></div><small style="font-size: 16px;margin: 30px;padding: 0px;">Email</small> <small style="font-size: 16px;margin: 30px;padding: 0px;">{{{application.dataValues.email}}}</small>
+    <div class="clearfix"><div> <small style="font-size: 16px;margin: 30px;">Experience</small> <small style="font-size: 16px;margin: 30px;padding: 0px;">{{{application.dataValues.experience}}}</small>
+    <div class="clearfix"></div><small style="font-size: 16px;margin: 30px;">NIC</small><small style="font-size: 16px;margin: 30px;padding: 0px;">{{{application.dataValues.nic}}}</small>
+    </div><small style="font-size: 16px;margin: 30px;">Education details</small><small style="font-size: 16px;margin: 30px;padding: 0px;">{{{application.dataValues.Qualification}}}</small>
     <div class="row">
         <div class="col">
             <h1 style="margin: 30px;font-size: 20px;">Schedule interview</h1>
